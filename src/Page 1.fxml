@@ -3,14 +3,19 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="pane1" maxHeight="1080.0" maxWidth="1920.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Page1">
+<AnchorPane fx:id="pane1" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Page1">
    <children>
-      <MediaView fx:id="backgroundVideo1" fitHeight="720.0" fitWidth="1280.0" />
-      <Pane fx:id="responsivePane" layoutX="751.0" layoutY="167.0" prefHeight="456.0" prefWidth="432.0">
+      <!-- Fullscreen responsive background video -->
+      <MediaView fx:id="backgroundVideo1" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" preserveRatio="false" />
+
+      <!-- Responsive overlay pane -->
+      <Pane fx:id="responsivePane" prefHeight="456.0" prefWidth="432.0" layoutX="751.0" layoutY="167.0">
          <children>
             <Label layoutX="64.0" layoutY="34.0" text="Welcome Learner !" textFill="#04ff00">
                <font>
@@ -27,42 +32,42 @@
                   <Font name="Elephant" size="11.0" />
                </font>
             </Label>
-            <TextField layoutX="35.0" layoutY="147.0" prefHeight="32.0" prefWidth="178.0" />
+            <TextField fx:id="firstNameField" layoutX="35.0" layoutY="147.0" prefHeight="32.0" prefWidth="178.0" />
             <Label layoutX="229.0" layoutY="125.0" text="Last Name :" textFill="WHITE">
                <font>
                   <Font name="Elephant" size="11.0" />
                </font>
             </Label>
-            <TextField layoutX="229.0" layoutY="147.0" prefHeight="32.0" prefWidth="178.0" />
+            <TextField fx:id="lastNameField" layoutX="229.0" layoutY="147.0" prefHeight="32.0" prefWidth="178.0" />
             <Label layoutX="35.0" layoutY="193.0" text="Email Account :" textFill="WHITE">
                <font>
                   <Font name="Elephant" size="11.0" />
                </font>
             </Label>
-            <TextField layoutX="35.0" layoutY="217.0" prefHeight="32.0" prefWidth="374.0" />
+            <TextField fx:id="emailField" layoutX="35.0" layoutY="217.0" prefHeight="32.0" prefWidth="374.0" />
             <Label layoutX="37.0" layoutY="267.0" text="Password :" textFill="WHITE">
                <font>
                   <Font name="Elephant" size="11.0" />
                </font>
             </Label>
-            <TextField layoutX="36.0" layoutY="290.0" prefHeight="32.0" prefWidth="178.0" />
+            <PasswordField fx:id="passwordField" layoutX="36.0" layoutY="290.0" prefHeight="32.0" prefWidth="178.0" />
             <Label layoutX="230.0" layoutY="267.0" text="Confirm Password :" textFill="WHITE">
                <font>
                   <Font name="Elephant" size="11.0" />
                </font>
             </Label>
-            <TextField layoutX="229.0" layoutY="290.0" prefHeight="32.0" prefWidth="178.0" />
-            <Button layoutX="229.0" layoutY="349.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="178.0" style="-fx-background-color: skyblue;" text="Register" textFill="WHITE">
+            <PasswordField fx:id="confirmPasswordField" layoutX="229.0" layoutY="290.0" prefHeight="32.0" prefWidth="178.0" />
+            <Button fx:id="registerButton" layoutX="229.0" layoutY="349.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="178.0" style="-fx-background-color: skyblue;" text="Register" textFill="WHITE">
                <font>
                   <Font name="Elephant" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="37.0" layoutY="342.0" text="By registering your account you&#10;agree with the &#10;and                         of thip app&#10;" textFill="WHITE">
+            <Label layoutX="37.0" layoutY="342.0" text="By registering your account you&#10;agree with the &#10;and                         of this app" textFill="WHITE">
                <font>
                   <Font size="10.0" />
                </font>
             </Label>
-            <Button layoutX="97.0" layoutY="354.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="terms and conditions" textFill="#04ff00">
+            <Button fx:id="termsButton" layoutX="97.0" layoutY="354.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="terms and conditions" textFill="#04ff00">
                <font>
                   <Font size="10.0" />
                </font>
@@ -72,12 +77,12 @@
                   <Font size="10.0" />
                </font>
             </Label>
-            <Button layoutX="51.0" layoutY="369.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="privacy policy" textFill="#04ff00">
+            <Button fx:id="privacyButton" layoutX="51.0" layoutY="369.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="privacy policy" textFill="#04ff00">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button layoutX="266.0" layoutY="412.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Sign in" textFill="#04ff00">
+            <Button fx:id="signInButton" layoutX="266.0" layoutY="412.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Sign in" textFill="#04ff00">
                <font>
                   <Font size="10.0" />
                </font>
@@ -85,4 +90,4 @@
          </children>
       </Pane>
    </children>
-</Pane>
+</AnchorPane>

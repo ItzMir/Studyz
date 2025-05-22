@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Studyz_f7af0bd4"
+        },
+        {
+            "type": "java",
             "name": "App (Mains.App)",
             "request": "launch",
             "mainClass": "Mains.App",
@@ -15,7 +22,8 @@
             "type": "java",
             "name": "Current File",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "${file}",
+            "projectName": "Studyz_f7af0bd4"
         },
         {
             "type": "java",
